@@ -3,18 +3,18 @@
     vertical-align: top;
 }
 
-.div.logo {
+.logo {
     width: 23%;
     padding: 1%;
     text-align: center;
 }
 
-.nav {
+nav {
     width: 73%;
     padding: 1%;
 }
 
-.ul {
+ul {
     width: 50%;
     margin-left: auto;
 }
@@ -29,14 +29,45 @@
     margin: 0 auto;
 }
 
-.footer {
+footer {
     background-color: #373738;
-    padding: 1%;
-
+    padding: 3%;
 }
 
-footer .ul {
+footer ul {
     display: inline-block;
     vertical-align: top;
-    padding: 1%;
+    padding: 25%;
 }
+
+.flexContainer{
+    display: flex;
+    flex-direction: row;
+}
+
+.flexContainer div{
+    width: 33%;
+}
+
+.workGrid{
+    display: grid;
+    grid-template-rows: auto auto;
+    grid-template-columns: auto auto;
+    grid-template-areas: "Project 1" "Project 2";
+}
+
+@media screen (max-width:600) {
+    
+    .flexContainer{
+        flex-direction: column;}
+
+
+    .flexContainer div{
+        width: 100%;
+    }
+
+    .workGrid{
+        grid-template-columns: 1fr;
+    }
+}
+
